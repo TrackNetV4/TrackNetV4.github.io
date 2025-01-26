@@ -1,46 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Under Construction</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        h1 {
-            font-size: 3rem;
-            color: #ff6347;
-        }
-        p {
-            font-size: 1.5rem;
-            margin: 1rem 0;
-        }
-        .container {
-            text-align: center;
-        }
-        .icon {
-            font-size: 5rem;
-            margin-bottom: 1rem;
-            color: #ff6347;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirecting to TIME Lab Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    .countdown {
+      font-size: 2rem;
+      color: lightskyblue;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="icon">🚧</div>
-        <h1>Under Construction</h1>
-        <p>We're working hard to bring something amazing to you. Stay tuned!</p>
-        <p>Check back soon for updates.</p>
-    </div>
+  <h1>Redirecting to TIME Lab Website</h1>
+  <p>TrackNetV4 website is avaliable at <a href="https://time.anu.edu.au/paper-sites/TrackNetV4/" target="_blank">https://time.anu.edu.au/paper-sites/TrackNetV4/</a>.
+     You will be redirected in <span class="countdown">8</span> seconds...</p>
+
+  <script>
+    const countdownElement = document.querySelector('.countdown');
+    let countdownValue = parseInt(countdownElement.textContent, 10);
+
+    const timer = setInterval(() => {
+      countdownValue--;
+      countdownElement.textContent = countdownValue;
+
+      if (countdownValue <= 0) {
+        clearInterval(timer);
+        window.location.href = "https://time.anu.edu.au/paper-sites/TrackNetV4/"; // Replace with your URL
+      }
+    }, 1000);
+  </script>
 </body>
 </html>
